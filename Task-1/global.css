@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #000000;
+  --color-primary: #ed2938;
+  --color-text-primary: #c62c2c;
+  --color-text-secondary: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--color-bg);
+}
