@@ -1,0 +1,40 @@
+/* Dashboard Main container */
+.dashboard-main-container {
+    width: 100%;
+    height: 100vh;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+/* Dashboard sub container */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Dashboard header */
+.dashboard-header h1 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Dashboard cards */
+.dashboard-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* card css */
+.card {
+    background-color: var(--secondary-background);
+    border: 0.5px solid var(--text-color);
+    padding: 10px 20px;
+}
+
+.card a {
+    color: var(--text-color);
+    text-decoration: none;
+}

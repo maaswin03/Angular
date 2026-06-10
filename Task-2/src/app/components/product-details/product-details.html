@@ -1,0 +1,52 @@
+<!-- main container -->
+<section class="pd-main-container">
+    <div class="pd-header">
+        <h1>{{product().title}}</h1>
+        <div class="pd-header-content">
+            @for(tag of product().tags; track tag){
+            <span>{{tag}}</span>
+            }
+        </div>
+    </div>
+    <!-- sub container -->
+    <div class="pd-sub-container">
+        <!-- image container -->
+        <div class="pd-image-container">
+            <div class="pd-thumbnail">
+                <img src="{{product().thumbnail}}" alt="product-image" height="350px" />
+            </div>
+            <div class="pd-image">
+                @for(image of product().images; track image){
+                <img src="{{image}}" alt="product-image" height="125px" class="pd-ind-image" />
+                }
+            </div>
+        </div>
+
+        <div class="pd-content-container">
+            <div class="pd-content">
+                <div class="pd-price">
+                    ₹ {{product().price}} 
+                </div>
+                <div class="pd-description">
+                    Save {{product().discountPercentage}}% with code DAD20
+                </div>
+                <div class="pd-description">
+                    {{product().description}}
+                </div>
+                <div class="pd-info">
+                    <span class="pd-info-chip">{{product().warrantyInformation}}</span>
+                    <span class="pd-info-chip">{{product().shippingInformation}}</span>
+                </div>
+                <div class="pd-reviews">
+                    @for(review of product().reviews; track review){
+                    <div class="pd-review-card">
+                        <div class="pd-review-rating">{{review.rating}}</div>
+                        <div class="pd-review-comment">{{review.comment}}</div>
+                        <div class="pd-review-author">{{review.reviewerName}}</div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

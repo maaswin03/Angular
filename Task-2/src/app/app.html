@@ -1,0 +1,5 @@
+<!-- show the header for protected component -->
+@if(authService.isLoggedIn()){
+<app-header></app-header>
+}
+<router-outlet></router-outlet>

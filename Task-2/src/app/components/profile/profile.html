@@ -1,0 +1,72 @@
+<!-- main container -->
+<section class="profile-main-container">
+    <!-- sub container -->
+    <div class="profile-sub-container">
+        <!-- right side -->
+        <div class="main-guy">
+            <div class="profile-section-1">
+                <div>
+                    <h2> Personal Details </h2>
+                </div>
+                <div class="profile-content">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" [value]="user().firstName" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" [value]="user().lastName" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="gender">Gender</label>
+                    <input type="text" id="gender" [value]="user().gender" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" [value]="user().email" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" [value]="user().phone" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="birthdate">Birth Date</label>
+                    <input type="text" id="birthdate" [value]="user().birthDate" disabled />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- left side -->
+        <div class="main-guy">
+            <div class="profile-section-1">
+                <div>
+                    <h2> Address Details</h2>
+                </div>
+                <div class="profile-content">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" [value]="user().address.address" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="city">City</label>
+                    <input type="text" id="city" [value]="user().address.city" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="State">State</label>
+                    <input type="text" id="state" [value]="user().address.state" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="statecode">State Code</label>
+                    <input type="text" id="statecode" [value]="user().address.stateCode" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="postalcode">Postal Code</label>
+                    <input type="text" id="postalcode" [value]="user().address.postalCode" disabled />
+                </div>
+                <div class="profile-content">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" [value]="user().address.country" disabled />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

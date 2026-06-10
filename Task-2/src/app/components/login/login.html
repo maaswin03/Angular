@@ -1,0 +1,51 @@
+<section>
+    <div class="login-main-container">
+
+        <div class="login-form-container">
+            <div class="login-container">
+                <!-- login header -->
+                <div class="login-header">
+                    <h2>Welcome Back</h2>
+                    <p>Please enter your details</p>
+                </div>
+
+                <!-- login form content -->
+                <div class="login-form-sub-container">
+                    <div class="login-form">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" [(ngModel)]="username" placeholder="Enter Username" />
+                    </div>
+
+                    <div class="login-form">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" [(ngModel)]="password" placeholder="Enter Password" />
+                    </div>
+                </div>
+
+                <!-- login button -->
+                <div class="login-button-container">
+                    <button [disabled]="isLoading()" (click)="loginUser()">
+                        @if(isLoading()){
+                        Signing In...
+                        }
+                        @else{
+                        Sign In
+                        }
+                    </button>
+                </div>
+
+                <!-- Error message here -->
+                @if(errorMessage()){
+                <div class="login-error-container">
+                    {{errorMessage()}}
+                </div>
+                }
+            </div>
+        </div>
+
+        <!-- side empty design -->
+        <div class="login-designer-container">
+        </div>
+
+    </div>
+</section>

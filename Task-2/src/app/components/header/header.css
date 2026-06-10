@@ -1,0 +1,42 @@
+/* header */
+.header-main-container {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--secondary-background);
+    background-color: var(--primary-background);
+    padding: 0px 3%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* sub header */
+.header-sub-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* heading  */
+.header-sub-container h2 {
+    color: var(--text-color);
+}
+
+/* logout button */
+.header-sub-container button {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: 'Rajdhani';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-sub-container button:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,47 @@
+<!-- <h1>Products Page</h1>
+
+<p>Total Products: {{ products().length }}</p>
+
+@for(product of products(); track product.id) {
+<div>
+    <p>{{ product.title }}</p>
+</div>
+} -->
+
+<section class="product-main-container">
+    <div class="product-container">
+        <!-- product header -->
+        <div class="product-header">
+            <h2>Explore Our Products</h2>
+            <p>High quality, great prices, and fast shipping</p>
+        </div>
+
+        <!-- product content -->
+        <div class="product-cards">
+            @for(product of products(); track product.id){
+            <!-- product cards -->
+            <div class="cards" (click)="viewProduct(product.id)">
+                <!-- product image -->
+                <div class="image-container">
+                    <img src="{{product.thumbnail}}" height="250px" />
+                </div>
+                <!-- product content -->
+                <div class="content-container">
+                    <div class="product-title">
+                        {{product.title}}
+                    </div>
+                    <div class="product-category">
+                        {{product.category}}
+                    </div>
+                    <div class="product-price">
+                        ₹ {{product.price}}
+                    </div>
+                    <div class="product-discount">
+                        Save {{product.discountPercentage}}% with code DAD20
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

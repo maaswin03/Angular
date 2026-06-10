@@ -1,0 +1,25 @@
+<section class="dashboard-main-container">
+    <div class="dashboard-sub-container">
+        <!-- Main container -->
+        <div class="dashboard-container">
+
+            <!-- dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Welcome back {{firstName}} !</h1>
+            </div>
+
+            <!-- dashboard cards -->
+            <div class="dashboard-cards">
+                <div class="card">
+                    <a [routerLink]="['/products']">Products</a>
+                </div>
+                <div class="card">
+                    <a [routerLink]="['/profile']">Profile</a>
+                </div>
+                <div class="card">
+                    <a [routerLink]="['/products',100]">Buy EarPhone</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
