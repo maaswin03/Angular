@@ -10,16 +10,18 @@ import { AuthApiService } from '../../services/auth.service';
 })
 export class Profile {
   user = signal<UserModel>(new UserModel())
+  isLoading = signal(true);
 
   //constructor for fetching the logged in user using jwt token
   constructor(private service: AuthApiService) {
     this.service.getUser().subscribe({
       next: (response) => {
         this.user.set(response);
-        console.log(response);
+        this.isLoading.set(false);
       },
       error: (error) => {
         console.log(error);
+        this.isLoading.set(false);
       }
     })
   }

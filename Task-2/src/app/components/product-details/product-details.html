@@ -1,4 +1,9 @@
-<!-- main container -->
+@if(isLoading()){
+<div class="loader">
+    Loading Product details...
+</div>
+}
+@else{
 <section class="pd-main-container">
     <div class="pd-header">
         <h1>{{product().title}}</h1>
@@ -25,7 +30,7 @@
         <div class="pd-content-container">
             <div class="pd-content">
                 <div class="pd-price">
-                    ₹ {{product().price}} 
+                    ₹ {{product().price}}
                 </div>
                 <div class="pd-description">
                     Save {{product().discountPercentage}}% with code DAD20
@@ -50,3 +55,4 @@
         </div>
     </div>
 </section>
+}

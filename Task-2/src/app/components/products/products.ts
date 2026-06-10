@@ -11,6 +11,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class Products {
   products = signal<ProductModel[]>([]);
+  isLoading = signal(true);
 
   //constructor for fetching all the products
   constructor(private service: ProductApiService, private router: Router) {
@@ -18,9 +19,11 @@ export class Products {
     this.service.getProduct().subscribe({
       next: (response) => {
         this.products.set(response.products);
+        this.isLoading.set(false);
       },
       error: (error) => {
         console.log(error);
+        this.isLoading.set(false);
       }
     })
   }

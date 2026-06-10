@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductDetails {
   //varaibale for storing the product details
   product = signal<ProductModel>(new ProductModel());
+  isLoading = signal(true);
 
   //constructor for fetching a particular product
   constructor(private service: ProductApiService, private route: ActivatedRoute, private router: Router) {
@@ -19,10 +20,11 @@ export class ProductDetails {
     this.service.getProductById(id).subscribe({
       next: (response) => {
         this.product.set(response);
-        console.log(response);
+        this.isLoading.set(false);
       },
       error: (error) => {
         console.log(error);
+        this.isLoading.set(false);
       }
     })
   }

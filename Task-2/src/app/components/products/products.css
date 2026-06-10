@@ -73,3 +73,11 @@
     color: var(--primary-color);
     font-size: 13px;
 }
+
+.loader {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
